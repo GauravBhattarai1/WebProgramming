@@ -6,14 +6,21 @@
         body {
             background-color: black;
             color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
         }
         .topnav {
             background-color: red;
+            width: 100%;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
         }
         .topnav a {
-            float: left;
-            display: block;
             color: white;
             text-align: center;
             padding: 14px 16px;
@@ -26,17 +33,21 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            gap: 10px;
+            width: 100%;
         }
         .item {
             text-align: center;
             margin: 10px;
-            width: 300px; 
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .item img {
-            width: 100%; 
+            width: 100%;
             height: auto;
             border: 2px solid red;
-            display: block;
             cursor: pointer;
         }
         .item p {
@@ -53,14 +64,14 @@
         <img src="file:///C:/Users/bhatt/Desktop/88.png" alt="Royal Enfield">
     </a>
     
-    <hr>
+    <hr style="width: 100%;">
     <div class="topnav">
         <a href="file:///C:/Users/bhatt/Desktop/get/WebProgramming/motorcycle.html">Motorcycles</a>
         <a href="file:///C:/Users/bhatt/Desktop/get/WebProgramming/Accessories.html">Accessories</a>
         <a href="https://www.royalenfield.com/np/en/locate-us/service-centres/">Services</a>
         <a href="https://www.royalenfield.com/np/en/support/contact-us/">About</a>
     </div>
-    <hr>
+    <hr style="width: 100%;">
     <h2>Choose By Category</h2>
     <div class="images">
         <div class="item">
