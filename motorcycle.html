@@ -19,12 +19,14 @@
             overflow: hidden;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         .topnav a {
             color: white;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            flex: 1 0 100px;
         }
         .topnav a:hover {
             background-color: darkred;
@@ -34,6 +36,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
+            width: 100%;
         }
         .item {
             display: flex;
@@ -41,19 +44,34 @@
             align-items: center;
             text-align: center;
             margin: 10px;
+            width: calc(100% / 2 - 20px);
         }
         .item img {
-            width: 300px; 
+            width: 100%;
+            max-width: 300px;
             height: auto;
-            border: 2px solid red; 
-            padding: 10px; 
+            border: 2px solid red;
+            padding: 10px;
             display: block;
         }
         .item p {
-            color: red; 
-            font-size: 18px; 
-            font-weight: bold; 
+            color: red;
+            font-size: 18px;
+            font-weight: bold;
             cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .item {
+                width: calc(100% / 2 - 10px);
+            }
+        }
+        @media (max-width: 600px) {
+            .topnav {
+                flex-direction: column;
+            }
+            .item {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -80,21 +98,21 @@
             </a>
         </div>
         <div class="item">
-            <a href="https://www.royalenfield.com/np/en/motorcycles/hunter-350/"target="_blank">
+            <a href="https://www.royalenfield.com/np/en/motorcycles/hunter-350/" target="_blank">
                 <img src="C:/Users/bhatt/Desktop/222.png" alt="Royal Enfield Hunter">
                 <p>Hunter<br>
                     Starting from Nrs 4,59,000</p>
             </a>
         </div>
         <div class="item">
-            <a href="https://www.royalenfield.com/np/en/motorcycles/classic-350/"target="_blank">
+            <a href="https://www.royalenfield.com/np/en/motorcycles/classic-350/" target="_blank">
                 <img src="C:/Users/bhatt/Desktop/333.png" alt="Royal Enfield Classic 350">
                 <p>Classic 350<br>
                     Starting from Nrs 5,20,000</p>
             </a>
         </div>
         <div class="item">
-            <a href="https://www.royalenfield.com/np/en/motorcycles/scram411/"target="_blank">
+            <a href="https://www.royalenfield.com/np/en/motorcycles/scram411/" target="_blank">
                 <img src="C:/Users/bhatt/Desktop/444.png" alt="Royal Enfield Scram411">
                 <p>Scram411<br>
                     Starting from Nrs 6,60,000</p>

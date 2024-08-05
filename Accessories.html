@@ -19,12 +19,14 @@
             overflow: hidden;
             display: flex;
             justify-content: center;
+            flex-wrap: wrap;
         }
         .topnav a {
             color: white;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            flex: 1 0 100px;
         }
         .topnav a:hover {
             background-color: darkred;
@@ -55,6 +57,19 @@
             font-size: 18px;
             font-weight: bold;
             cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .item {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 600px) {
+            .topnav {
+                flex-direction: column;
+            }
+            .item {
+                width: 100%;
+            }
         }
     </style>
 </head>
