@@ -1,71 +1,152 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Services</title>
-        <style>
-            body {
-                background-color: black;
-                color: white;
-                font-family: Arial, sans-serif;
-            }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Servicing Form</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            width: 400px;
+            max-width: 100%;
+            margin-top: 20px;
+        }
+
+        .topnav {
+            background-color: red;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .topnav a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            flex: 1 0 100px;
+        }
+
+        .topnav a:hover {
+            background-color: darkred;
+        }
+
+        h1 {
+            color: #ff0000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            color: #ff0000;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #444;
+            border-radius: 4px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff0000;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #cc0000;
+        }
+
+        @media (max-width: 768px) {
             .topnav a {
-                display: inline-block;
-                background-color: grey;
-                color: blue;
-                padding: 10px;
-                margin: 5px;
-                text-decoration: none;
-                border-radius: 5px;
+                flex: 1 0 80px;
             }
-            .topnav a:hover {
-                background-color: darkgrey;
+        }
+
+        @media (max-width: 600px) {
+            .topnav {
+                flex-direction: column;
             }
-            hr {
-                border-color: white;
-            }
-            .course-links a {
-                color: blue;
-                text-decoration: none;
-            }
-            .course-links a:hover {
-                text-decoration: underline;
-            }
-        </style>
+        }
+    </style>
+</head>
+<body>
 
-    </head>
-    <body>
-        
-        <h1>Git Educational Consultancy</h1>
-        <hr>
-        <div class="topnav">
-            <a class="active" href="file:///C:/Users/bhatt/Desktop/get/WebProgramming/index.html">Home</a>
-            <a href="file:///C:/Users/bhatt/Desktop/get/WebProgramming/help.html">Support us</a>
-            <a href="file:///C:/Users/bhatt/Desktop/get/WebProgramming/services.html">Services</a>
-            <a href="file:///C:/Users/bhatt/Desktop/get/WebProgramming/aboutus.html">About</a>
-          </div>
-        <h2>Python Programming</h2>
-        <p> 
-            <div>
-                Beginner to Advanced Python: Covering basic syntax, data structures, object-oriented programming, file handling, libraries such as Pandas and NumPy, and web development with Flask/Django.<br>
-Data Science with Python: Introduction to data analysis, visualization with Matplotlib and Seaborn, machine learning with Scikit-Learn, and deep learning fundamentals.
-</div>
-<div>
-<h3>Java Programming</h3>           
+    <!-- Navigation Bar -->
+    <div class="topnav">
+        <a href="file:///C:/Users/bhatt/Desktop/get/WebProgramming/motorcycle.html">Motorcycles</a>
+        <a href="file:///C:/Users/bhatt/Desktop/get/WebProgramming/Accessories.html">Accessories</a>
+        <a href="file:///C:/Users/bhatt/Desktop/get/WebProgramming/services.html">Services</a>
+        <a href="file:///C:/Users/bhatt/Desktop/get/WebProgramming/aboutus.html">About</a>
+    </div>
 
-Java Fundamentals: Basic syntax, object-oriented programming principles, exception handling, and file I/O.<br>
-Advanced Java Concepts: Multi-threading, networking, JavaFX, and Spring Framework for web development.
-</div><div>
-<h4>Web Development with HTML & CSS</h4>
-HTML5: Structuring web content, semantic elements, forms, multimedia, and best practices.<br>
-CSS3: Styling web pages, layout techniques, responsive design, Flexbox, Grid, and CSS animations.
-</div><div>
-<h5>C++ Programming</h5>
+    <!-- Bike Servicing Form Container -->
+    <div class="container">
+        <h1>Bike Servicing Form</h1>
+        <form action="#" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
 
-C++ Basics: Syntax, data types, control structures, functions, arrays, and pointers.<br>
-Advanced C++: Object-oriented programming, templates, Standard Template Library (STL), and memory management.
-            </div>
-</p>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
 
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
 
-    </body>
+            <label for="bike-model">Bike Model</label>
+            <input type="text" id="bike-model" name="bike-model" required>
+
+            <label for="service-type">Service Type</label>
+            <select id="service-type" name="service-type" required>
+                <option value="basic">Basic Service</option>
+                <option value="full">Full Service</option>
+                <option value="engine">Engine Service</option>
+                <option value="custom">Custom Service</option>
+            </select>
+
+            <label for="service-date">Preferred Service Date</label>
+            <input type="date" id="service-date" name="service-date" required>
+
+            <label for="comments">Additional Comments</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
 </html>

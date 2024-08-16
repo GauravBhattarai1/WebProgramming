@@ -1,54 +1,165 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>About Us</title>
-        <style>
-            body {
-                background-color: black;
-                color: white;
-                font-family: Arial, sans-serif;
-            }
-            .topnav a {
-                display: inline-block;
-                background-color: grey;
-                color: blue;
-                padding: 10px;
-                margin: 5px;
-                text-decoration: none;
-                border-radius: 5px;
-            }
-            .topnav a:hover {
-                background-color: darkgrey;
-            }
-            hr {
-                border-color: white;
-            }
-            .course-links a {
-                color: blue;
-                text-decoration: none;
-            }
-            .course-links a:hover {
-                text-decoration: underline;
-            }
-        </style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Servicing Form</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
 
-    </head>
-    <body>
-        
-        <h1>Git Educational Consultancy</h1>
-        
-        <hr>
-        <div class="topnav">
-            <a class="active" href="file:///C:/Users/bhatt/Desktop/get/WebProgramming/index.html">Home</a>
-            <a href="file:///C:/Users/bhatt/Desktop/get/WebProgramming/help.html">Support us</a>
-            <a href="file:///C:/Users/bhatt/Desktop/get/WebProgramming/services.html">Services</a>
-            <a href="file:///C:/Users/bhatt/Desktop/get/WebProgramming/aboutus.html">About</a>
-          </div>
-        <p> 
-            <div>Welcome to **Git Educational Consultancy**, your premier destination for top-notch<br> programming education and career development. Founded with a mission to empower<br> individuals with the skills needed to excel in the ever-evolving tech industry, we offer a<br> comprehensive range of courses tailored to today's job market demands. Our experienced<br> instructors bring a wealth of industry knowledge and practical expertise, ensuring high-<br>quality education. Whether you're a beginner or an experienced professional, our<br> curriculum emphasizes practical application through coding projects, real-world scenarios,<br> and interactive exercises. With flexible learning options, personalized tutoring, career<br> counseling, and intensive coding bootcamps, we are committed to your success. Join us to<br> gain the skills needed for a rewarding career in technology, and earn a certificate of<br> completion to showcase your abilities to potential employers. Git Educational Consultancy <br>– Transforming education, transforming lives.
-</div>
-</p>
+        .container {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            width: 400px;
+            max-width: 100%;
+            margin-top: 20px;
+        }
 
+        h1, h2 {
+            color: #ff0000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    </body>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        table, th, td {
+            border: 1px solid #444;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        th {
+            background-color: #ff0000;
+        }
+
+        td {
+            background-color: #333;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #2a2a2a;
+        }
+
+        label {
+            color: #ff0000;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #444;
+            border-radius: 4px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff0000;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #cc0000;
+        }
+
+        .topnav {
+            background-color: red;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; 
+        }
+
+        .topnav a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            flex: 1 0 100px; 
+        }
+
+        .topnav a:hover {
+            background-color: darkred;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="topnav">
+        <a href="motorcycle.html">Motorcycles</a>
+        <a href="Accessories.html">Accessories</a>
+        <a href="services.html">Services</a>
+        <a href="aboutus.html">About</a>
+    </div>
+
+    <div class="container">
+        <h2>Available Showrooms</h2>
+        <table>
+            <tr>
+                <th>Showroom Name</th>
+                <th>Location</th>
+                <th>Number</th>
+            </tr>
+            <tr>
+                <td>Company Store Naxal</td>
+                <td>Narayanchawr park, Naxal- Kathmandu, Besides Of Jeep Showroom, Kathmandu -44600</td>
+                <td>9802337182</td>
+            </tr>
+            <tr>
+                <td>Royal Enfield Company Store</td>
+                <td>Teku ward No-11, Tripureshwor, Tripura Marg, Opposite to Sanima Bank, Kathmandu -44600</td>
+                <td>9801956310</td>
+            </tr>
+            <tr>
+                <td>Company Store Koteshwor</td>
+                <td>Lalitpur, Balkumari Bridge Chakrapath Near Priority Health Clinic & Medical Center Pharmalife, Kathmandu -44600</td>
+                <td>9802335875</td>
+            </tr>
+            <tr>
+                <td>Vintage Moto Café</td>
+                <td>Sallaghari, Suryabinayak Municipality Ward No- 5, Near Imperial Banquet, Bhaktapur -44800</td>
+                <td>9851113052</td>
+            </tr>
+        </table>
+    </div>
+</body>
 </html>
